@@ -10,18 +10,18 @@ package Modelo;
  */
 public class DetalleVenta {
     private int idDetalleVenta;
-private Venta venta; // Relación con Venta
-private Producto producto; // Relación con Producto
+private int IdVenta; // Relación con Venta
+private int IdProducto; // Relación con Producto
 private int cantidad;
 private float precioUnitario;
 
     public DetalleVenta() {
     }
 
-    public DetalleVenta(int idDetalleVenta, Venta venta, Producto producto, int cantidad, float precioUnitario) {
+    public DetalleVenta(int idDetalleVenta, int IdVenta, int IdProducto, int cantidad, float precioUnitario) {
         this.idDetalleVenta = idDetalleVenta;
-        this.venta = venta;
-        this.producto = producto;
+        this.IdVenta = IdVenta;
+        this.IdProducto = IdProducto;
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
     }
@@ -34,20 +34,20 @@ private float precioUnitario;
         this.idDetalleVenta = idDetalleVenta;
     }
 
-    public Venta getVenta() {
-        return venta;
+    public int getIdVenta() {
+        return IdVenta;
     }
 
-    public void setVenta(Venta venta) {
-        this.venta = venta;
+    public void setIdVenta(int IdVenta) {
+        this.IdVenta = IdVenta;
     }
 
-    public Producto getProducto() {
-        return producto;
+    public int getIdProducto() {
+        return IdProducto;
     }
 
-    public void setProducto(Producto producto) {
-        this.producto = producto;
+    public void setIdProducto(int IdProducto) {
+        this.IdProducto = IdProducto;
     }
 
     public int getCantidad() {
@@ -66,4 +66,5 @@ private float precioUnitario;
         this.precioUnitario = precioUnitario;
     }
 
+    
 }

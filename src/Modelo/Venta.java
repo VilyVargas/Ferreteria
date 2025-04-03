@@ -10,47 +10,44 @@ import java.util.List;
  * @author Estudiantes
  */
 public class Venta {
-    private int idVenta;
-private Cliente cliente; // Relación con Cliente
-private Empleado empleado; // Relación con Empleado
+    private int IdVenta;
+private int IdCliente; // Relación con Cliente
+private int IdEmpleado; // Relación con Empleado
 private Date fechaVenta;
 private float totalVenta;
 private List<DetalleVenta> detalles; // Relación con DetalleVenta
 
-    public Venta() {
-    }
-
-    public Venta(int idVenta, Cliente cliente, Empleado empleado, Date fechaVenta, float totalVenta, List<DetalleVenta> detalles) {
-        this.idVenta = idVenta;
-        this.cliente = cliente;
-        this.empleado = empleado;
+    public Venta(int IdVenta, int IdCliente, int IdEmpleado, Date fechaVenta, float totalVenta, List<DetalleVenta> detalles) {
+        this.IdVenta = IdVenta;
+        this.IdCliente = IdCliente;
+        this.IdEmpleado = IdEmpleado;
         this.fechaVenta = fechaVenta;
         this.totalVenta = totalVenta;
         this.detalles = detalles;
     }
 
     public int getIdVenta() {
-        return idVenta;
+        return IdVenta;
     }
 
-    public void setIdVenta(int idVenta) {
-        this.idVenta = idVenta;
+    public void setIdVenta(int IdVenta) {
+        this.IdVenta = IdVenta;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public int getIdCliente() {
+        return IdCliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setIdCliente(int IdCliente) {
+        this.IdCliente = IdCliente;
     }
 
-    public Empleado getEmpleado() {
-        return empleado;
+    public int getIdEmpleado() {
+        return IdEmpleado;
     }
 
-    public void setEmpleado(Empleado empleado) {
-        this.empleado = empleado;
+    public void setIdEmpleado(int IdEmpleado) {
+        this.IdEmpleado = IdEmpleado;
     }
 
     public Date getFechaVenta() {
@@ -76,5 +73,10 @@ private List<DetalleVenta> detalles; // Relación con DetalleVenta
     public void setDetalles(List<DetalleVenta> detalles) {
         this.detalles = detalles;
     }
+
+    public Venta() {
+    }
+
+    
 
 }

@@ -12,6 +12,16 @@
             <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/Compra.java</file>
             <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/DetalleCompra.java</file>
             <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/Modelo/DetalleVenta.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/Util/ConexionDB.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/CategoriaDAO.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/ClienteDAO.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/CompraDAO.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/DetalleCompraDAO.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/DetalleVentaDAO.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/EmpleadoDAO.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/ProductoDAO.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/UsuarioDAO.java</file>
+            <file>file:/C:/Users/Estudiantes/Documents/NetBeansProjects/FerreteriaMVC/src/DAO/VentaDAO.java</file>
         </group>
     </open-files>
 </project-private>

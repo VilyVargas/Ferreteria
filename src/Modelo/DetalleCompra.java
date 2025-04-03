@@ -11,18 +11,18 @@ package Modelo;
 public class DetalleCompra {
 
 private int idDetalleCompra;
-private Compra compra; // Relación con Compra
-private Producto producto; // Relación con Producto
+private int IdCompra; // Relación con Compra
+private int IdProducto; // Relación con Producto
 private int cantidad;
 private float precioUnitario;
 
     public DetalleCompra() {
     }
 
-    public DetalleCompra(int idDetalleCompra, Compra compra, Producto producto, int cantidad, float precioUnitario) {
+    public DetalleCompra(int idDetalleCompra, int IdCompra, int IdProducto, int cantidad, float precioUnitario) {
         this.idDetalleCompra = idDetalleCompra;
-        this.compra = compra;
-        this.producto = producto;
+        this.IdCompra = IdCompra;
+        this.IdProducto = IdProducto;
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
     }
@@ -35,20 +35,20 @@ private float precioUnitario;
         this.idDetalleCompra = idDetalleCompra;
     }
 
-    public Compra getCompra() {
-        return compra;
+    public int getIdCompra() {
+        return IdCompra;
     }
 
-    public void setCompra(Compra compra) {
-        this.compra = compra;
+    public void setIdCompra(int IdCompra) {
+        this.IdCompra = IdCompra;
     }
 
-    public Producto getProducto() {
-        return producto;
+    public int getIdProducto() {
+        return IdProducto;
     }
 
-    public void setProducto(Producto producto) {
-        this.producto = producto;
+    public void setIdProducto(int IdProducto) {
+        this.IdProducto = IdProducto;
     }
 
     public int getCantidad() {
@@ -67,4 +67,5 @@ private float precioUnitario;
         this.precioUnitario = precioUnitario;
     }
 
+    
 }

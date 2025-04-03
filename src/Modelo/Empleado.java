@@ -32,9 +32,6 @@ private Date fechaContratacion;
         this.fechaContratacion = fechaContratacion;
     }
 
-    public Empleado() {
-    }
-
     public int getIdEmpleado() {
         return idEmpleado;
     }
@@ -98,6 +95,11 @@ private Date fechaContratacion;
     public void setFechaContratacion(Date fechaContratacion) {
         this.fechaContratacion = fechaContratacion;
     }
+
+    public Empleado() {
+    }
+
+ 
 
 }
 
