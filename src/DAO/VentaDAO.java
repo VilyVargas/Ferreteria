@@ -50,17 +50,44 @@ public class VentaDAO {
         }
         return ventas;
     }
+    
+    public void actualizarVenta(Venta venta) throws SQLException {
+        String sql = "UPDATE Ventas SET id_cliente = ?, id_empleado = ?, fecha_venta = ?, total_venta = ? WHERE id_venta = ?";
+
+        try (Connection c = ConexionDB.getConnection(); PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, venta.getIdCliente());
+            stmt.setInt(2, venta.getIdEmpleado());
+            stmt.setTimestamp(3, new java.sql.Timestamp(venta.getFechaVenta().getTime()));
+            stmt.setFloat(4, venta.getTotalVenta());
+            stmt.setInt(5, venta.getIdVenta());
+            stmt.executeUpdate();
+        }
+    }
+
+    public void eliminarVenta(int idVenta) throws SQLException {
+        String sql = "DELETE FROM Ventas WHERE id_venta = ?";
+
+        try (Connection c = ConexionDB.getConnection(); PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, idVenta);
+            stmt.executeUpdate();
+        }
+    }
 
     public static void main(String[] args) {
         try {
             VentaDAO dao = new VentaDAO();
-            Venta v1 = new Venta();
-            v1.setIdCliente(1);
-            v1.setIdEmpleado(1);
-            v1.setFechaVenta(new Date());
-            v1.setTotalVenta(200.75f);
-            dao.crearVenta(v1);
-            System.out.println("Venta creada con éxito!");
+
+
+            // Leer y mostrar todas las ventas para verificar
+            List<Venta> ventas = dao.leerTodasVentas();
+            System.out.println("Lista de ventas:");
+            for (Venta ven : ventas) {
+                System.out.println("ID: " + ven.getIdVenta()
+                        + ", Cliente ID: " + ven.getIdCliente()
+                        + ", Empleado ID: " + ven.getIdEmpleado()
+                        + ", Fecha: " + ven.getFechaVenta()
+                        + ", Total: " + ven.getTotalVenta());
+            }
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
         }

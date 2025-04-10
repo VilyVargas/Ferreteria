@@ -48,6 +48,27 @@ public class CompraDAO {
         return compras;
     }
 
+    public void actualizarCompra(Compra compra) throws SQLException {
+        String sql = "UPDATE Compras SET id_empleado = ?, fecha_compra = ?, total_compra = ? WHERE id_compra = ?";
+
+        try (Connection c = ConexionDB.getConnection(); PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, compra.getIdEmpleado());
+            stmt.setDate(2, new java.sql.Date(compra.getFechaCompra().getTime()));
+            stmt.setFloat(3, compra.getTotalCompra());
+            stmt.setInt(4, compra.getIdCompra());
+            stmt.executeUpdate();
+        }
+    }
+
+    public void eliminarCompra(int idCompra) throws SQLException {
+        String sql = "DELETE FROM Compras WHERE id_compra = ?";
+
+        try (Connection c = ConexionDB.getConnection(); PreparedStatement stmt = c.prepareStatement(sql)) {
+            stmt.setInt(1, idCompra);
+            stmt.executeUpdate();
+        }
+    }
+
     public static void main(String[] args) {
         try {
             CompraDAO dao = new CompraDAO();
