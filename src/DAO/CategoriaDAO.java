@@ -68,17 +68,6 @@ public class CategoriaDAO {
         try {
             CategoriaDAO dao = new CategoriaDAO();
 
-            // Actualizar una categoría
-            Categoria categoria = new Categoria();
-            categoria.setIdCategoria(1); // ID existente
-            categoria.setNombreCategoria("Electrónica Actualizada");
-            categoria.setDescripcionCategoria("Productos electrónicos modernos");
-            dao.actualizarCategoria(categoria);
-            System.out.println("Categoría actualizada.");
-
-            // Eliminar una categoría
-            dao.eliminarCategoria(2); // ID a eliminar
-            System.out.println("Categoría eliminada.");
 
             // Leer y mostrar todas las categorías para verificar
             List<Categoria> categorias = dao.leerTodasCategorias();

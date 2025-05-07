@@ -84,34 +84,12 @@ public class ProductoDAO {
         try {
             ProductoDAO dao = new ProductoDAO();
 
-            // Actualizar un producto
-            Producto producto = new Producto();
-            producto.setIdProducto(1); // ID existente
-            producto.setNombreProducto("Laptop Actualizada");
-            producto.setDescripcionProducto("Laptop de alta gama");
-            producto.setIdCategoria(1);
-            producto.setPrecioUnitario(1200.0f);
-            producto.setStock(50);
-            producto.setImagen("laptop.jpg");
-            dao.actualizarProducto(producto);
-            System.out.println("Producto actualizado.");
 
             // Eliminar un producto
             dao.eliminarProducto(2); // ID a eliminar
             System.out.println("Producto eliminado.");
 
-            // Leer y mostrar todos los productos para verificar
-            List<Producto> productos = dao.leerTodosProductos();
-            System.out.println("Lista de productos:");
-            for (Producto prod : productos) {
-                System.out.println("ID: " + prod.getIdProducto()
-                        + ", Nombre: " + prod.getNombreProducto()
-                        + ", Descripción: " + prod.getDescripcionProducto()
-                        + ", Categoría ID: " + prod.getIdCategoria()
-                        + ", Precio: " + prod.getPrecioUnitario()
-                        + ", Stock: " + prod.getStock()
-                        + ", Imagen: " + prod.getImagen());
-            }
+            
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
         }

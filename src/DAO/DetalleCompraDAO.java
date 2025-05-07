@@ -86,20 +86,6 @@ public class DetalleCompraDAO {
             dao.actualizarDetalleCompra(detalle);
             System.out.println("Detalle de compra actualizado.");
 
-            // Eliminar un detalle de compra
-            dao.eliminarDetalleCompra(2); // ID a eliminar
-            System.out.println("Detalle de compra eliminado.");
-
-            // Leer y mostrar todos los detalles de compra para verificar
-            List<DetalleCompra> detalles = dao.leerTodosDetallesCompra();
-            System.out.println("Lista de detalles de compra:");
-            for (DetalleCompra det : detalles) {
-                System.out.println("ID: " + det.getIdDetalleCompra()
-                        + ", Compra ID: " + det.getIdCompra()
-                        + ", Producto ID: " + det.getIdProducto()
-                        + ", Cantidad: " + det.getCantidad()
-                        + ", Precio Unitario: " + det.getPrecioUnitario());
-            }
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
         }

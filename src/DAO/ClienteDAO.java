@@ -90,34 +90,11 @@ public static void main(String[] args) {
     try {
         ClienteDAO dao = new ClienteDAO();
         
-        // Actualizar un cliente
-        Cliente cliente = new Cliente();
-        cliente.setIdCliente(1); // ID existente
-        cliente.setPrimerNombre("Juan");
-        cliente.setSegundoNombre("Carlos");
-        cliente.setPrimerApellido("Pérez");
-        cliente.setSegundoApellido("Gómez");
-        cliente.setCelular("1234567890");
-        cliente.setDireccion("Calle 123");
-        cliente.setCedula("12345678");
-        dao.actualizarCliente(cliente);
-        System.out.println("Cliente actualizado.");
-        
         // Eliminar un cliente
         dao.eliminarCliente(2); // ID a eliminar
         System.out.println("Cliente eliminado.");
         
-        // Leer y mostrar todos los clientes para verificar
-        List<Cliente> clientes = dao.leerTodosClientes();
-        System.out.println("Lista de clientes:");
-        for (Cliente cli : clientes) {
-            System.out.println("ID: " + cli.getIdCliente() + 
-                               ", Nombre: " + cli.getPrimerNombre() + " " + cli.getSegundoNombre() + 
-                               " " + cli.getPrimerApellido() + " " + cli.getSegundoApellido() + 
-                               ", Celular: " + cli.getCelular() + 
-                               ", Dirección: " + cli.getDireccion() + 
-                               ", Cédula: " + cli.getCedula());
-        }
+        
     } catch (SQLException e) {
         System.err.println("Error: " + e.getMessage());
     }

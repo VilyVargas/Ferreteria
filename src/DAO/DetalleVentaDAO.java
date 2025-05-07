@@ -86,20 +86,7 @@ public class DetalleVentaDAO {
             dao.actualizarDetalleVenta(detalle);
             System.out.println("Detalle de venta actualizado.");
 
-            // Eliminar un detalle de venta
-            dao.eliminarDetalleVenta(2); // ID a eliminar
-            System.out.println("Detalle de venta eliminado.");
-
-            // Leer y mostrar todos los detalles de venta para verificar
-            List<DetalleVenta> detalles = dao.leerTodosDetallesVenta();
-            System.out.println("Lista de detalles de venta:");
-            for (DetalleVenta det : detalles) {
-                System.out.println("ID: " + det.getIdDetalleVenta()
-                        + ", Venta ID: " + det.getIdVenta()
-                        + ", Producto ID: " + det.getIdProducto()
-                        + ", Cantidad: " + det.getCantidad()
-                        + ", Precio Unitario: " + det.getPrecioUnitario());
-            }
+            
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
         }
